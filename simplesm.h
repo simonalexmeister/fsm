@@ -147,7 +147,6 @@ TSimpleSM<STATETYPE>
   return &(i->second )( obj, event );
 }
 
-
 template <typename STATETYPE>
 int
 TSimpleSM<STATETYPE>
@@ -201,4 +200,3 @@ TSimpleSM<STATETYPE>
   static state_t nullstate({"NullState"}, true);
   return nullstate;
 }
-

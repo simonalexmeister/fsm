@@ -20,8 +20,8 @@ public:
   explicit TStaticID( TStaticID&& id ) : m_id(id.m_id), m_name(std::move(id.m_name))  {}
   TStaticID( const std::string& name): m_id (TStaticID<TARGETOBJECT>::NewID()), m_name(name)  {}
   /// Операторы сравнения
-  bool operator==(TStaticID &rhs) { return static_cast<int &>(m_id) == static_cast<int &>(rhs.m_id); }
-  bool operator!=(TStaticID &rhs) { return !(*this == rhs); }
+  bool operator==(TStaticID &rhs) const { return m_id == rhs.m_id; }
+  bool operator!=(TStaticID &rhs) const { return !(*this == rhs); }
 
   /// Операторы приведения типов
   operator const int& () const { return m_id; }

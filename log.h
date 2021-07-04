@@ -1,4 +1,9 @@
 #pragma once
-#include <iostream.h>
+#include <iostream>
 
-#define DOUTSM(args) do{(std::cout << args);} while(0)
+#define DOUTSM(args)
+#define EOUTSM(args)
+
+//#define DOUTSM(args) do{(std::cout << args);} while(0)
+//#define EOUTSM(args) do{(std::cout << args);} while(0)
+
